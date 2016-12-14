@@ -1,0 +1,10 @@
+c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\bin\Debug\WyborLaptopaOkienkowy.exe.config
+c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\bin\Debug\WyborLaptopaOkienkowy.exe
+c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\bin\Debug\WyborLaptopaOkienkowy.pdb
+c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.csprojResolveAssemblyReference.cache
+c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.Form1.resources
+c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.Form2.resources
+c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.Properties.Resources.resources
+c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.csproj.GenerateResource.Cache
+c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.exe
+c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.pdb
