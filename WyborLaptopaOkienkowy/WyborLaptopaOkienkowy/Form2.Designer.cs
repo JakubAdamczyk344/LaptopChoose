@@ -53,7 +53,7 @@
             this.boxIfDesignerNo = new System.Windows.Forms.CheckBox();
             this.boxIfDesignerYes = new System.Windows.Forms.CheckBox();
             this.pnlAnswersQuestion6 = new System.Windows.Forms.Panel();
-            this.boxIdDesignerJobNo = new System.Windows.Forms.CheckBox();
+            this.boxIfDesignerJobNo = new System.Windows.Forms.CheckBox();
             this.boxIfDesignerJobYes = new System.Windows.Forms.CheckBox();
             this.pnlAnswersQuestion7 = new System.Windows.Forms.Panel();
             this.boxIfPlayerNo = new System.Windows.Forms.CheckBox();
@@ -85,14 +85,14 @@
             this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(864, 73);
+            this.textBox1.Size = new System.Drawing.Size(871, 106);
             this.textBox1.TabIndex = 1;
             // 
             // pnlAnswersQuestion0
             // 
             this.pnlAnswersQuestion0.Controls.Add(this.boxIfTakenNo);
             this.pnlAnswersQuestion0.Controls.Add(this.boxIfTakenYes);
-            this.pnlAnswersQuestion0.Location = new System.Drawing.Point(58, 113);
+            this.pnlAnswersQuestion0.Location = new System.Drawing.Point(58, 159);
             this.pnlAnswersQuestion0.Name = "pnlAnswersQuestion0";
             this.pnlAnswersQuestion0.Size = new System.Drawing.Size(744, 22);
             this.pnlAnswersQuestion0.TabIndex = 2;
@@ -121,7 +121,7 @@
             // 
             this.pnlAnswersQuestion1.Controls.Add(this.boxTravelByPublic);
             this.pnlAnswersQuestion1.Controls.Add(this.boxTravelByAuto);
-            this.pnlAnswersQuestion1.Location = new System.Drawing.Point(58, 141);
+            this.pnlAnswersQuestion1.Location = new System.Drawing.Point(58, 184);
             this.pnlAnswersQuestion1.Name = "pnlAnswersQuestion1";
             this.pnlAnswersQuestion1.Size = new System.Drawing.Size(744, 21);
             this.pnlAnswersQuestion1.TabIndex = 3;
@@ -180,7 +180,7 @@
             // 
             this.pnlAnswersQuestion2.Controls.Add(this.boxIfUseNo);
             this.pnlAnswersQuestion2.Controls.Add(this.boxIfUseYes);
-            this.pnlAnswersQuestion2.Location = new System.Drawing.Point(58, 168);
+            this.pnlAnswersQuestion2.Location = new System.Drawing.Point(58, 209);
             this.pnlAnswersQuestion2.Name = "pnlAnswersQuestion2";
             this.pnlAnswersQuestion2.Size = new System.Drawing.Size(744, 22);
             this.pnlAnswersQuestion2.TabIndex = 4;
@@ -209,7 +209,7 @@
             // 
             this.pnlAnswersQuestion3.Controls.Add(this.boxIfGraphicNo);
             this.pnlAnswersQuestion3.Controls.Add(this.boxIfGraphicYes);
-            this.pnlAnswersQuestion3.Location = new System.Drawing.Point(58, 198);
+            this.pnlAnswersQuestion3.Location = new System.Drawing.Point(58, 233);
             this.pnlAnswersQuestion3.Name = "pnlAnswersQuestion3";
             this.pnlAnswersQuestion3.Size = new System.Drawing.Size(744, 23);
             this.pnlAnswersQuestion3.TabIndex = 5;
@@ -238,7 +238,7 @@
             // 
             this.pnlAnswersQuestion4.Controls.Add(this.boxIfGraphicJobNo);
             this.pnlAnswersQuestion4.Controls.Add(this.boxIfGraphicJobYes);
-            this.pnlAnswersQuestion4.Location = new System.Drawing.Point(58, 227);
+            this.pnlAnswersQuestion4.Location = new System.Drawing.Point(58, 261);
             this.pnlAnswersQuestion4.Name = "pnlAnswersQuestion4";
             this.pnlAnswersQuestion4.Size = new System.Drawing.Size(744, 21);
             this.pnlAnswersQuestion4.TabIndex = 6;
@@ -267,7 +267,7 @@
             // 
             this.pnlAnswersQuestion5.Controls.Add(this.boxIfDesignerNo);
             this.pnlAnswersQuestion5.Controls.Add(this.boxIfDesignerYes);
-            this.pnlAnswersQuestion5.Location = new System.Drawing.Point(58, 256);
+            this.pnlAnswersQuestion5.Location = new System.Drawing.Point(58, 285);
             this.pnlAnswersQuestion5.Name = "pnlAnswersQuestion5";
             this.pnlAnswersQuestion5.Size = new System.Drawing.Size(744, 21);
             this.pnlAnswersQuestion5.TabIndex = 7;
@@ -294,22 +294,22 @@
             // 
             // pnlAnswersQuestion6
             // 
-            this.pnlAnswersQuestion6.Controls.Add(this.boxIdDesignerJobNo);
+            this.pnlAnswersQuestion6.Controls.Add(this.boxIfDesignerJobNo);
             this.pnlAnswersQuestion6.Controls.Add(this.boxIfDesignerJobYes);
-            this.pnlAnswersQuestion6.Location = new System.Drawing.Point(58, 283);
+            this.pnlAnswersQuestion6.Location = new System.Drawing.Point(58, 311);
             this.pnlAnswersQuestion6.Name = "pnlAnswersQuestion6";
             this.pnlAnswersQuestion6.Size = new System.Drawing.Size(744, 21);
             this.pnlAnswersQuestion6.TabIndex = 8;
             // 
-            // boxIdDesignerJobNo
+            // boxIfDesignerJobNo
             // 
-            this.boxIdDesignerJobNo.AutoSize = true;
-            this.boxIdDesignerJobNo.Location = new System.Drawing.Point(485, 1);
-            this.boxIdDesignerJobNo.Name = "boxIdDesignerJobNo";
-            this.boxIdDesignerJobNo.Size = new System.Drawing.Size(42, 17);
-            this.boxIdDesignerJobNo.TabIndex = 1;
-            this.boxIdDesignerJobNo.Text = "Nie";
-            this.boxIdDesignerJobNo.UseVisualStyleBackColor = true;
+            this.boxIfDesignerJobNo.AutoSize = true;
+            this.boxIfDesignerJobNo.Location = new System.Drawing.Point(485, 1);
+            this.boxIfDesignerJobNo.Name = "boxIfDesignerJobNo";
+            this.boxIfDesignerJobNo.Size = new System.Drawing.Size(42, 17);
+            this.boxIfDesignerJobNo.TabIndex = 1;
+            this.boxIfDesignerJobNo.Text = "Nie";
+            this.boxIfDesignerJobNo.UseVisualStyleBackColor = true;
             // 
             // boxIfDesignerJobYes
             // 
@@ -325,7 +325,7 @@
             // 
             this.pnlAnswersQuestion7.Controls.Add(this.boxIfPlayerNo);
             this.pnlAnswersQuestion7.Controls.Add(this.boxIfPlayerYes);
-            this.pnlAnswersQuestion7.Location = new System.Drawing.Point(58, 311);
+            this.pnlAnswersQuestion7.Location = new System.Drawing.Point(58, 335);
             this.pnlAnswersQuestion7.Name = "pnlAnswersQuestion7";
             this.pnlAnswersQuestion7.Size = new System.Drawing.Size(744, 23);
             this.pnlAnswersQuestion7.TabIndex = 9;
@@ -355,7 +355,7 @@
             this.pnlAnswersQuestion8.Controls.Add(this.boxWhichPlayerRare);
             this.pnlAnswersQuestion8.Controls.Add(this.boxWhichPlayerCasual);
             this.pnlAnswersQuestion8.Controls.Add(this.boxWhichPlayerManiac);
-            this.pnlAnswersQuestion8.Location = new System.Drawing.Point(58, 340);
+            this.pnlAnswersQuestion8.Location = new System.Drawing.Point(58, 361);
             this.pnlAnswersQuestion8.Name = "pnlAnswersQuestion8";
             this.pnlAnswersQuestion8.Size = new System.Drawing.Size(744, 21);
             this.pnlAnswersQuestion8.TabIndex = 10;
@@ -430,7 +430,7 @@
         private System.Windows.Forms.CheckBox boxIfGraphicJobYes;
         private System.Windows.Forms.CheckBox boxIfDesignerNo;
         private System.Windows.Forms.CheckBox boxIfDesignerYes;
-        private System.Windows.Forms.CheckBox boxIdDesignerJobNo;
+        private System.Windows.Forms.CheckBox boxIfDesignerJobNo;
         private System.Windows.Forms.CheckBox boxIfDesignerJobYes;
         private System.Windows.Forms.CheckBox boxIfPlayerNo;
         private System.Windows.Forms.CheckBox boxIfPlayerYes;

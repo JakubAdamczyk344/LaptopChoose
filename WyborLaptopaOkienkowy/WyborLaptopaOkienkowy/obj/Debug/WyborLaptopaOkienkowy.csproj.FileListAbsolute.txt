@@ -8,3 +8,13 @@ c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborL
 c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.csproj.GenerateResource.Cache
 c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.exe
 c:\users\kuba\documents\visual studio 2015\Projects\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.pdb
+F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\bin\Debug\WyborLaptopaOkienkowy.exe.config
+F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.exe
+F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.pdb
+F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\bin\Debug\WyborLaptopaOkienkowy.exe
+F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\bin\Debug\WyborLaptopaOkienkowy.pdb
+F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.csprojResolveAssemblyReference.cache
+F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.Form1.resources
+F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.Form2.resources
+F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.Properties.Resources.resources
+F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.csproj.GenerateResource.Cache
