@@ -106,6 +106,7 @@
             this.boxIfTakenNo.TabIndex = 1;
             this.boxIfTakenNo.Text = "Nie";
             this.boxIfTakenNo.UseVisualStyleBackColor = true;
+            this.boxIfTakenNo.CheckedChanged += new System.EventHandler(this.boxIfTakenNo_CheckedChanged);
             // 
             // boxIfTakenYes
             // 
@@ -116,6 +117,7 @@
             this.boxIfTakenYes.TabIndex = 0;
             this.boxIfTakenYes.Text = "Tak";
             this.boxIfTakenYes.UseVisualStyleBackColor = true;
+            this.boxIfTakenYes.CheckedChanged += new System.EventHandler(this.boxIfTakenYes_CheckedChanged);
             // 
             // pnlAnswersQuestion1
             // 
@@ -135,6 +137,7 @@
             this.boxTravelByPublic.TabIndex = 1;
             this.boxTravelByPublic.Text = "Komunikacja publiczna";
             this.boxTravelByPublic.UseVisualStyleBackColor = true;
+            this.boxTravelByPublic.CheckedChanged += new System.EventHandler(this.boxTravelByPublic_CheckedChanged);
             // 
             // boxTravelByAuto
             // 
@@ -145,6 +148,7 @@
             this.boxTravelByAuto.TabIndex = 0;
             this.boxTravelByAuto.Text = "Auto";
             this.boxTravelByAuto.UseVisualStyleBackColor = true;
+            this.boxTravelByAuto.CheckedChanged += new System.EventHandler(this.boxTravelByAuto_CheckedChanged);
             // 
             // boxWhichPlayerManiac
             // 
@@ -155,6 +159,7 @@
             this.boxWhichPlayerManiac.TabIndex = 2;
             this.boxWhichPlayerManiac.Text = "Totalny maniak";
             this.boxWhichPlayerManiac.UseVisualStyleBackColor = true;
+            this.boxWhichPlayerManiac.CheckedChanged += new System.EventHandler(this.boxWhichPlayerManiac_CheckedChanged);
             // 
             // boxWhichPlayerCasual
             // 
@@ -165,6 +170,7 @@
             this.boxWhichPlayerCasual.TabIndex = 1;
             this.boxWhichPlayerCasual.Text = "Zwykły gracz";
             this.boxWhichPlayerCasual.UseVisualStyleBackColor = true;
+            this.boxWhichPlayerCasual.CheckedChanged += new System.EventHandler(this.boxWhichPlayerCasual_CheckedChanged);
             // 
             // boxWhichPlayerRare
             // 
@@ -175,6 +181,7 @@
             this.boxWhichPlayerRare.TabIndex = 0;
             this.boxWhichPlayerRare.Text = "Niedzielny gracz";
             this.boxWhichPlayerRare.UseVisualStyleBackColor = true;
+            this.boxWhichPlayerRare.CheckedChanged += new System.EventHandler(this.boxWhichPlayerRare_CheckedChanged);
             // 
             // pnlAnswersQuestion2
             // 
@@ -194,6 +201,7 @@
             this.boxIfUseNo.TabIndex = 1;
             this.boxIfUseNo.Text = "Nie";
             this.boxIfUseNo.UseVisualStyleBackColor = true;
+            this.boxIfUseNo.CheckedChanged += new System.EventHandler(this.boxIfUseNo_CheckedChanged);
             // 
             // boxIfUseYes
             // 
@@ -204,6 +212,7 @@
             this.boxIfUseYes.TabIndex = 0;
             this.boxIfUseYes.Text = "Tak";
             this.boxIfUseYes.UseVisualStyleBackColor = true;
+            this.boxIfUseYes.CheckedChanged += new System.EventHandler(this.boxIfUseYes_CheckedChanged);
             // 
             // pnlAnswersQuestion3
             // 
@@ -223,6 +232,7 @@
             this.boxIfGraphicNo.TabIndex = 1;
             this.boxIfGraphicNo.Text = "Nie";
             this.boxIfGraphicNo.UseVisualStyleBackColor = true;
+            this.boxIfGraphicNo.CheckedChanged += new System.EventHandler(this.boxIfGraphicNo_CheckedChanged);
             // 
             // boxIfGraphicYes
             // 
@@ -233,6 +243,7 @@
             this.boxIfGraphicYes.TabIndex = 0;
             this.boxIfGraphicYes.Text = "Tak";
             this.boxIfGraphicYes.UseVisualStyleBackColor = true;
+            this.boxIfGraphicYes.CheckedChanged += new System.EventHandler(this.boxIfGraphicYes_CheckedChanged);
             // 
             // pnlAnswersQuestion4
             // 
@@ -252,6 +263,7 @@
             this.boxIfGraphicJobNo.TabIndex = 1;
             this.boxIfGraphicJobNo.Text = "Nie";
             this.boxIfGraphicJobNo.UseVisualStyleBackColor = true;
+            this.boxIfGraphicJobNo.CheckedChanged += new System.EventHandler(this.boxIfGraphicJobNo_CheckedChanged);
             // 
             // boxIfGraphicJobYes
             // 
@@ -262,6 +274,7 @@
             this.boxIfGraphicJobYes.TabIndex = 0;
             this.boxIfGraphicJobYes.Text = "Tak";
             this.boxIfGraphicJobYes.UseVisualStyleBackColor = true;
+            this.boxIfGraphicJobYes.CheckedChanged += new System.EventHandler(this.boxIfGraphicJobYes_CheckedChanged);
             // 
             // pnlAnswersQuestion5
             // 
@@ -281,6 +294,7 @@
             this.boxIfDesignerNo.TabIndex = 1;
             this.boxIfDesignerNo.Text = "Nie";
             this.boxIfDesignerNo.UseVisualStyleBackColor = true;
+            this.boxIfDesignerNo.CheckedChanged += new System.EventHandler(this.boxIfDesignerNo_CheckedChanged);
             // 
             // boxIfDesignerYes
             // 
@@ -291,6 +305,7 @@
             this.boxIfDesignerYes.TabIndex = 0;
             this.boxIfDesignerYes.Text = "Tak";
             this.boxIfDesignerYes.UseVisualStyleBackColor = true;
+            this.boxIfDesignerYes.CheckedChanged += new System.EventHandler(this.boxIfDesignerYes_CheckedChanged);
             // 
             // pnlAnswersQuestion6
             // 
@@ -310,6 +325,7 @@
             this.boxIfDesignerJobNo.TabIndex = 1;
             this.boxIfDesignerJobNo.Text = "Nie";
             this.boxIfDesignerJobNo.UseVisualStyleBackColor = true;
+            this.boxIfDesignerJobNo.CheckedChanged += new System.EventHandler(this.boxIfDesignerJobNo_CheckedChanged);
             // 
             // boxIfDesignerJobYes
             // 
@@ -320,6 +336,7 @@
             this.boxIfDesignerJobYes.TabIndex = 0;
             this.boxIfDesignerJobYes.Text = "Tak";
             this.boxIfDesignerJobYes.UseVisualStyleBackColor = true;
+            this.boxIfDesignerJobYes.CheckedChanged += new System.EventHandler(this.boxIfDesignerJobYes_CheckedChanged);
             // 
             // pnlAnswersQuestion7
             // 
@@ -339,6 +356,7 @@
             this.boxIfPlayerNo.TabIndex = 1;
             this.boxIfPlayerNo.Text = "Nie";
             this.boxIfPlayerNo.UseVisualStyleBackColor = true;
+            this.boxIfPlayerNo.CheckedChanged += new System.EventHandler(this.boxIfPlayerNo_CheckedChanged);
             // 
             // boxIfPlayerYes
             // 
@@ -349,6 +367,7 @@
             this.boxIfPlayerYes.TabIndex = 0;
             this.boxIfPlayerYes.Text = "Tak";
             this.boxIfPlayerYes.UseVisualStyleBackColor = true;
+            this.boxIfPlayerYes.CheckedChanged += new System.EventHandler(this.boxIfPlayerYes_CheckedChanged);
             // 
             // pnlAnswersQuestion8
             // 

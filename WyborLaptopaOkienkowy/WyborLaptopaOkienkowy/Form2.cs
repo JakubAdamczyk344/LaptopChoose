@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace WyborLaptopaOkienkowy
 {
-    
     public partial class Form2 : Form
     {
         private readonly string[] questions = new string[9]; //initialize array which will contain questions
@@ -181,6 +180,113 @@ namespace WyborLaptopaOkienkowy
                 + Environment.NewLine + "Waga: " + weight + Environment.NewLine + "Wydajność procesora: " + processorPerformance
                 + Environment.NewLine + "Wydajność karty graficznej: " + graphicPerformance + Environment.NewLine + "SSD: " + SSD
                 + Environment.NewLine + "RAM: " + RAM + Environment.NewLine + "HDD: " + HDD;
+        }
+        //Make sure that only one answer for every question can be checked
+        private void boxIfTakenYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxIfTakenYes.Checked == true) boxIfTakenNo.Checked=false;
+        }
+
+        private void boxIfTakenNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxIfTakenNo.Checked == true) boxIfTakenYes.Checked = false;
+        }
+
+        private void boxTravelByAuto_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxTravelByAuto.Checked == true) boxTravelByPublic.Checked = false;
+        }
+
+        private void boxTravelByPublic_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxTravelByPublic.Checked == true) boxTravelByAuto.Checked = false;
+        }
+
+        private void boxIfUseYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxIfUseYes.Checked == true) boxIfUseNo.Checked = false;
+        }
+
+        private void boxIfUseNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxIfUseNo.Checked == true) boxIfUseYes.Checked = false;
+        }
+
+        private void boxIfGraphicYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxIfGraphicYes.Checked == true) boxIfGraphicNo.Checked = false;
+        }
+
+        private void boxIfGraphicNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if(boxIfGraphicNo.Checked == true) boxIfGraphicYes.Checked = false;
+        }
+
+        private void boxIfGraphicJobYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxIfGraphicJobYes.Checked == true) boxIfGraphicJobNo.Checked = false;
+        }
+
+        private void boxIfGraphicJobNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxIfGraphicJobNo.Checked == true) boxIfGraphicJobYes.Checked = false;
+        }
+
+        private void boxIfDesignerYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxIfDesignerYes.Checked == true) boxIfDesignerNo.Checked = false;
+        }
+
+        private void boxIfDesignerNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxIfDesignerNo.Checked == true) boxIfDesignerYes.Checked = false;
+        }
+
+        private void boxIfDesignerJobYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxIfDesignerJobYes.Checked == true) boxIfDesignerJobNo.Checked = false;
+        }
+
+        private void boxIfDesignerJobNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxIfDesignerJobNo.Checked == true) boxIfDesignerJobYes.Checked = false;
+        }
+
+        private void boxIfPlayerYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxIfPlayerYes.Checked == true) boxIfPlayerNo.Checked = false;
+        }
+
+        private void boxIfPlayerNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxIfPlayerNo.Checked == true) boxIfPlayerYes.Checked = false;
+        }
+
+        private void boxWhichPlayerRare_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxWhichPlayerRare.Checked == true)
+            {
+                boxWhichPlayerCasual.Checked = false;
+                boxWhichPlayerManiac.Checked = false;
+            }
+        }
+
+        private void boxWhichPlayerCasual_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxWhichPlayerCasual.Checked == true)
+            {
+                boxWhichPlayerRare.Checked = false;
+                boxWhichPlayerManiac.Checked = false;
+            }
+        }
+
+        private void boxWhichPlayerManiac_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxWhichPlayerManiac.Checked == true)
+            {
+                boxWhichPlayerCasual.Checked = false;
+                boxWhichPlayerRare.Checked = false;
+            }
         }
     }
 }
