@@ -14,6 +14,7 @@ namespace WyborLaptopaOkienkowy
     {
         private readonly string[] questions = new string[9]; //initialize array which will contain questions
         List<Panel> panels = new List<Panel>();
+        //List<CheckBox> checkBoxes = new List<CheckBox>();
         int whichQuestion = 0; //set number of first question to display
         static string size;
         static string weight;
@@ -54,6 +55,8 @@ namespace WyborLaptopaOkienkowy
             panels.Add(pnlAnswersQuestion6);
             panels.Add(pnlAnswersQuestion7);
             panels.Add(pnlAnswersQuestion8);
+            /*checkBoxes.Add(boxIfDesignerJobNo);
+            checkBoxes.Add(boxIfDesignerJobYes);*/
             setAnswers();
         }
 
@@ -62,7 +65,7 @@ namespace WyborLaptopaOkienkowy
             textBox1.Text = questions[whichQuestion];
         }
 
-        private void setAnswers() //function for displaying new answers
+        private void setAnswers() //function for displaying possible answers for each question
         {
             foreach (var panel in panels) //hide all panels
             {
@@ -73,15 +76,22 @@ namespace WyborLaptopaOkienkowy
 
         private void button1_Click(object sender, EventArgs e) //display next question and answers
         {
+            checkIfUserAnswered();
             skipQuestion();
             if (whichQuestion < 8)
             {
+
                 whichQuestion++;
                 setQuestion();
                 setAnswers();
             }
+            else
+            {
+                button1.Text = "Zakończ ankietę";
+                checkAnswers();
+            }
             //if (whichQuestion == 9) whichQuestion = 0; //loop question and answer setting, only for tests
-            else checkAnswers();
+            
         }
 
         private void skipQuestion() //some questions need to be skipped if answer for previous question was "no"
@@ -287,6 +297,19 @@ namespace WyborLaptopaOkienkowy
                 boxWhichPlayerCasual.Checked = false;
                 boxWhichPlayerRare.Checked = false;
             }
+        }
+
+        private void checkIfUserAnswered() //this function checks if any of possible answers is checked. If not user cannot go to the next question
+        {
+            if (whichQuestion == 0 && boxIfTakenYes.Checked == false && boxIfTakenNo.Checked == false) whichQuestion = -1;
+            if (whichQuestion == 1 && boxTravelByAuto.Checked == false && boxTravelByPublic.Checked == false) whichQuestion = 0;
+            if (whichQuestion == 2 && boxIfUseYes.Checked== false && boxIfUseNo.Checked == false) whichQuestion = 1;
+            if (whichQuestion == 3 && boxIfGraphicYes.Checked == false && boxIfGraphicNo.Checked == false) whichQuestion = 2;
+            if (whichQuestion == 4 && boxIfGraphicJobYes.Checked == false && boxIfGraphicJobNo.Checked == false) whichQuestion = 3;
+            if (whichQuestion == 5 && boxIfDesignerYes.Checked == false && boxIfDesignerNo.Checked == false) whichQuestion = 4;
+            if (whichQuestion == 6 && boxIfDesignerJobYes.Checked == false && boxIfDesignerJobNo.Checked == false) whichQuestion = 5;
+            if (whichQuestion == 7 && boxIfPlayerYes.Checked == false && boxIfPlayerNo.Checked == false) whichQuestion = 6;
+            if (whichQuestion == 8 && boxWhichPlayerRare.Checked == false && boxWhichPlayerCasual.Checked == false && boxWhichPlayerManiac.Checked == false) whichQuestion = 7;
         }
     }
 }
