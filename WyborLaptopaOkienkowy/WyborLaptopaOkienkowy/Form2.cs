@@ -16,13 +16,13 @@ namespace WyborLaptopaOkienkowy
         List<Panel> panels = new List<Panel>();
         //List<CheckBox> checkBoxes = new List<CheckBox>();
         int whichQuestion = 0; //set number of first question to display
-        static string size;
-        static string weight;
-        static string processorPerformance;
-        static string graphicPerformance;
-        static string SSD;
-        static string RAM;
-        static string HDD;
+        public static string size; //dodać potem gettery i ustanowić te pola prywatnymi
+        public static string weight;
+        public static string processorPerformance;
+        public static string graphicPerformance;
+        public static string SSD;
+        public static string RAM;
+        public static string diskSpace;
         static string ifTaken;
         static string travelBy;
         static string ifUse;
@@ -89,6 +89,7 @@ namespace WyborLaptopaOkienkowy
             {
                 button1.Text = "Zakończ ankietę";
                 checkAnswers();
+                showSummary();
             }
             //if (whichQuestion == 9) whichQuestion = 0; //loop question and answer setting, only for tests
             
@@ -140,56 +141,56 @@ namespace WyborLaptopaOkienkowy
             }
             if (boxIfDesignerNo.Checked == true && boxIfGraphicNo.Checked == true && boxIfPlayerNo.Checked == true)
             {
-                processorPerformance = "low";
+                processorPerformance = "low";//ok
                 graphicPerformance = "low";
                 SSD = "no";
-                HDD = "below and equal 500 GB";
+                diskSpace = "below and equal 500 GB";
                 RAM = "below and equal 8 GB";
             }
             if ((boxIfDesignerYes.Checked == true && boxIfDesignerJobNo.Checked == true) || (boxIfPlayerYes.Checked == true && boxWhichPlayerRare.Checked == true))
             {
-                processorPerformance = "medium";
+                processorPerformance = "medium";//ok
                 graphicPerformance = "medium";
                 SSD = "no";
-                HDD = "below and equal 500 GB";
+                diskSpace = "below and equal 500 GB";
                 RAM = "below and equal 8 GB";
             }
             if (boxIfGraphicYes.Checked == true && boxIfGraphicJobYes.Checked == true)
             {
-                processorPerformance = "medium";
-                graphicPerformance = "medium";
-                SSD = "no";
-                HDD = "below and equal 500 GB";
+                processorPerformance = "medium";//ok
+                graphicPerformance = "high";
+                SSD = "yes";
+                diskSpace = "below and equal 500 GB";
                 RAM = "below and equal 8 GB";
             }
             if (boxIfPlayerYes.Checked == true && boxWhichPlayerCasual.Checked == true)
             {
-                processorPerformance = "medium";
+                processorPerformance = "medium";//ok
                 graphicPerformance = "high";
-                SSD = "no";
-                HDD = "below and equal 500 GB";
+                SSD = "yes";
+                diskSpace = "below and equal 500 GB";
                 RAM = "above 8 GB";
             }
             if (boxIfGraphicYes.Checked == true && boxIfGraphicJobYes.Checked == true)
             {
-                processorPerformance = "high";
+                processorPerformance = "high";//ok
                 if (graphicPerformance != "high") graphicPerformance = "medium";
                 SSD = "yes";
-                HDD = "below and equal 500 GB";
+                diskSpace = "below and equal 500 GB";
                 RAM = "above 8 GB";
             }
             if ((boxIfDesignerYes.Checked == true && boxIfDesignerJobYes.Checked == true) || (boxIfPlayerYes.Checked == true && boxWhichPlayerManiac.Checked == true))
             {
-                processorPerformance = "high";
+                processorPerformance = "high";//ok
                 graphicPerformance = "high";
                 SSD = "yes";
-                HDD = "above 500 GB";
+                diskSpace = "above 500 GB";
                 RAM = "above 8 GB";
             }
             textBox1.Text = "Parametry dobranego laptopa: " + Environment.NewLine + "Rozmiar: " + size
                 + Environment.NewLine + "Waga: " + weight + Environment.NewLine + "Wydajność procesora: " + processorPerformance
                 + Environment.NewLine + "Wydajność karty graficznej: " + graphicPerformance + Environment.NewLine + "SSD: " + SSD
-                + Environment.NewLine + "RAM: " + RAM + Environment.NewLine + "HDD: " + HDD;
+                + Environment.NewLine + "RAM: " + RAM + Environment.NewLine + "HDD: " + diskSpace;
         }
         //Make sure that only one answer for every question can be checked
         private void boxIfTakenYes_CheckedChanged(object sender, EventArgs e)
@@ -310,6 +311,13 @@ namespace WyborLaptopaOkienkowy
             if (whichQuestion == 6 && boxIfDesignerJobYes.Checked == false && boxIfDesignerJobNo.Checked == false) whichQuestion = 5;
             if (whichQuestion == 7 && boxIfPlayerYes.Checked == false && boxIfPlayerNo.Checked == false) whichQuestion = 6;
             if (whichQuestion == 8 && boxWhichPlayerRare.Checked == false && boxWhichPlayerCasual.Checked == false && boxWhichPlayerManiac.Checked == false) whichQuestion = 7;
+        }
+
+        private void showSummary()
+        {
+            this.Hide();
+            Form3 frm3 = new Form3();
+            frm3.Show();
         }
     }
 }

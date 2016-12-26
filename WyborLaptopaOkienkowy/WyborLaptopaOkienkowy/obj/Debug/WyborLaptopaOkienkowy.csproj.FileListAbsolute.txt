@@ -18,3 +18,6 @@ F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienk
 F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.Form2.resources
 F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.Properties.Resources.resources
 F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.csproj.GenerateResource.Cache
+F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\bin\Debug\Database1.mdf
+F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\bin\Debug\Database1_log.ldf
+F:\KUBA\MAGISTERKA\Semestr2\Bazy wiedzy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\WyborLaptopaOkienkowy\obj\Debug\WyborLaptopaOkienkowy.Form3.resources
