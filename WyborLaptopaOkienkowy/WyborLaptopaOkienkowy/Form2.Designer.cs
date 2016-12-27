@@ -85,7 +85,7 @@
             this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(871, 106);
+            this.textBox1.Size = new System.Drawing.Size(871, 130);
             this.textBox1.TabIndex = 1;
             // 
             // pnlAnswersQuestion0

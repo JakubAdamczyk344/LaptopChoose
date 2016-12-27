@@ -16,14 +16,14 @@ namespace WyborLaptopaOkienkowy
         List<Panel> panels = new List<Panel>();
         //List<CheckBox> checkBoxes = new List<CheckBox>();
         int whichQuestion = 0; //set number of first question to display
-        public static string size; //dodać potem gettery i ustanowić te pola prywatnymi
-        public static string weight;
-        public static string processorPerformance;
-        public static string graphicPerformance;
-        public static string SSD;
-        public static string RAM;
-        public static string diskSpace;
-        static string ifTaken;
+        private static string size;
+        private static string weight;
+        private static string processorPerformance;
+        private static string graphicPerformance;
+        private static string SSD;
+        private static string RAM;
+        private static string diskSpace;
+        /*static string ifTaken;
         static string travelBy;
         static string ifUse;
         static string ifGraphic;
@@ -31,7 +31,42 @@ namespace WyborLaptopaOkienkowy
         static string ifGraphicJob;
         static string ifDesignerJob;
         static string ifPlayer;
-        static string whichPlayer;
+        static string whichPlayer;*/
+
+        public static string getSize()
+        {
+            return size;
+        }
+
+        public static string getWeight()
+        {
+            return weight;
+        }
+
+        public static string getProcessorPerformance()
+        {
+            return processorPerformance;
+        }
+
+        public static string getGraphicPerformance()
+        {
+            return graphicPerformance;
+        }
+
+        public static string getSSD()
+        {
+            return SSD;
+        }
+
+        public static string getRAM()
+        {
+            return RAM;
+        }
+
+        public static string getDiskSpace()
+        {
+            return diskSpace;
+        }
 
         public Form2()
         {
@@ -133,7 +168,7 @@ namespace WyborLaptopaOkienkowy
             }
             if (boxIfTakenYes.Checked == true && boxIfUseYes.Checked == true)
             {
-                size = "below and equal 15,6 cala";
+                size = "below and equal 15,6";
             }
             if (boxIfTakenYes.Checked == true && boxIfUseNo.Checked == true)
             {
@@ -190,7 +225,7 @@ namespace WyborLaptopaOkienkowy
             textBox1.Text = "Parametry dobranego laptopa: " + Environment.NewLine + "Rozmiar: " + size
                 + Environment.NewLine + "Waga: " + weight + Environment.NewLine + "Wydajność procesora: " + processorPerformance
                 + Environment.NewLine + "Wydajność karty graficznej: " + graphicPerformance + Environment.NewLine + "SSD: " + SSD
-                + Environment.NewLine + "RAM: " + RAM + Environment.NewLine + "HDD: " + diskSpace;
+                + Environment.NewLine + "RAM: " + RAM + Environment.NewLine + "Disk space: " + diskSpace;
         }
         //Make sure that only one answer for every question can be checked
         private void boxIfTakenYes_CheckedChanged(object sender, EventArgs e)
@@ -315,7 +350,7 @@ namespace WyborLaptopaOkienkowy
 
         private void showSummary()
         {
-            this.Hide();
+            //this.Hide();
             Form3 frm3 = new Form3();
             frm3.Show();
         }

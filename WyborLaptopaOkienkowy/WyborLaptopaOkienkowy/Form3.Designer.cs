@@ -34,6 +34,7 @@
             this.notebooksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.notebooksTableAdapter = new WyborLaptopaOkienkowy.Database1DataSetTableAdapters.NotebooksTableAdapter();
             this.tableAdapterManager = new WyborLaptopaOkienkowy.Database1DataSetTableAdapters.TableAdapterManager();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notebooksBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -41,9 +42,9 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(39, 24);
+            this.listBox1.Location = new System.Drawing.Point(12, 24);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(632, 30);
+            this.listBox1.Size = new System.Drawing.Size(659, 173);
             this.listBox1.TabIndex = 0;
             // 
             // database1DataSet
@@ -66,11 +67,20 @@
             this.tableAdapterManager.NotebooksTableAdapter = this.notebooksTableAdapter;
             this.tableAdapterManager.UpdateOrder = WyborLaptopaOkienkowy.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(13, 204);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(658, 43);
+            this.textBox1.TabIndex = 1;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 339);
+            this.ClientSize = new System.Drawing.Size(940, 259);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listBox1);
             this.Name = "Form3";
             this.Text = "Form3";
@@ -78,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notebooksBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -88,5 +99,6 @@
         private System.Windows.Forms.BindingSource notebooksBindingSource;
         private Database1DataSetTableAdapters.NotebooksTableAdapter notebooksTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
