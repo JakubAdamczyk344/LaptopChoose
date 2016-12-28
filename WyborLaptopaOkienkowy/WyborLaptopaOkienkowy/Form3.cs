@@ -14,7 +14,6 @@ namespace WyborLaptopaOkienkowy
 {
     public partial class Form3 : Form
     {
-        //public static Form2 openedForm = null;
         private string size = Form2.getSize();
         private string weight = Form2.getWeight();
         private string processorPerformance = Form2.getProcessorPerformance();
@@ -30,7 +29,7 @@ namespace WyborLaptopaOkienkowy
 
         SqlConnection connection;
         string connectionString; //contains info about database connection, name of database etc
-        string query = "SELECT * FROM Notebooks WHERE Size > 0 AND SSD = 'False'";
+        string query;
         private void createQuery() //here my query is created based on notebook's parameters
         {
             if (size == "all") sizeQuery = " Size > 0";
@@ -43,7 +42,7 @@ namespace WyborLaptopaOkienkowy
             if (RAM == "above 8 GB") RAMQuery = " RAM > 8";
             if (diskSpace == "below and equal 500 GB") diskSpaceQuery = " HDD + SSDCapacity <= 500";
             if (diskSpace == "above 500 GB") diskSpaceQuery = " HDD + SSDCapacity > 500";
-            query = "SELECT * FROM Notebooks WHERE" + sizeQuery + " AND " + weightQuery + " AND " + "ProcessorPerformance = '" +
+            query = "SELECT Name, Processor, Graphics, RAM, HDD, SSDCapacity FROM Notebooks WHERE" + sizeQuery + " AND " + weightQuery + " AND " + "ProcessorPerformance = '" +
                 processorPerformance + "' AND " + "GraphicPerformance = '" + graphicPerformance + "' AND " + SSDQuery +
                 " AND " + RAMQuery + " AND " + diskSpaceQuery;
         }
@@ -67,26 +66,34 @@ namespace WyborLaptopaOkienkowy
                 + Environment.NewLine + "RAM: " + RAM + Environment.NewLine + "Disk space: " + diskSpace;
             createQuery();
             textBox1.Text = query;
-            using (connection = new SqlConnection(connectionString))
-            using(SqlDataAdapter adapter = new SqlDataAdapter(query,connection))
-            {
-                DataTable notebooksTable = new DataTable();
-                adapter.Fill(notebooksTable);
+            
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter ada = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            ada.Fill(dt);
 
-                listBox1.DisplayMember = "Name";
-                listBox1.ValueMember = "Laptop";
-                listBox1.DataSource = notebooksTable;
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                DataRow dr = dt.Rows[i];
+                ListViewItem listitem = new ListViewItem(dr["Name"].ToString());
+                listitem.SubItems.Add(dr["Processor"].ToString());
+                listitem.SubItems.Add(dr["Graphics"].ToString());
+                listitem.SubItems.Add(dr["RAM"].ToString());
+                listitem.SubItems.Add(dr["HDD"].ToString());
+                listitem.SubItems.Add(dr["SSDCapacity"].ToString());
+                listView1.Items.Add(listitem);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //utworzyć w form1 globalną zmienną form2 przy otwieraniu form2 i tu ją zamknąć
-            //https://social.msdn.microsoft.com/Forums/vstudio/en-US/c8d039e2-818c-44c4-bfe0-6052afbd6688/close-or-hide-a-form-from-another-form-c?forum=csharpgeneral
-            this.Close();
-            //Form1.openedForm.Close();
+            this.Hide();
             Form2 frm2 = new Form2();
             frm2.Show();
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

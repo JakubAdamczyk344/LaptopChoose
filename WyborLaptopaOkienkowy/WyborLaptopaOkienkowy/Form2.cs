@@ -14,7 +14,6 @@ namespace WyborLaptopaOkienkowy
     {
         private readonly string[] questions = new string[9]; //initialize array which will contain questions
         List<Panel> panels = new List<Panel>();
-        //List<CheckBox> checkBoxes = new List<CheckBox>();
         private int whichQuestion = 0; //set number of first question to display
         private static string size;
         private static string weight;
@@ -23,15 +22,6 @@ namespace WyborLaptopaOkienkowy
         private static string SSD;
         private static string RAM;
         private static string diskSpace;
-        /*static string ifTaken;
-        static string travelBy;
-        static string ifUse;
-        static string ifGraphic;
-        static string ifDesigner;
-        static string ifGraphicJob;
-        static string ifDesignerJob;
-        static string ifPlayer;
-        static string whichPlayer;*/
 
         public static string getSize()
         {
@@ -90,8 +80,6 @@ namespace WyborLaptopaOkienkowy
             panels.Add(pnlAnswersQuestion6);
             panels.Add(pnlAnswersQuestion7);
             panels.Add(pnlAnswersQuestion8);
-            /*checkBoxes.Add(boxIfDesignerJobNo);
-            checkBoxes.Add(boxIfDesignerJobYes);*/
             setAnswers();
         }
 
@@ -350,9 +338,13 @@ namespace WyborLaptopaOkienkowy
 
         private void showSummary()
         {
-            this.Close();
+            this.Hide();
             Form3 frm3 = new Form3();
             frm3.Show();
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

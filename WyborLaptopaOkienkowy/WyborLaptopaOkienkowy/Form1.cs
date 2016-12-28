@@ -14,8 +14,6 @@ namespace WyborLaptopaOkienkowy
 {
     public partial class Form1 : Form
     {
-        //public static Form2 openedForm = null;
-
         public Form1()
         {
             InitializeComponent();
@@ -23,8 +21,6 @@ namespace WyborLaptopaOkienkowy
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*openedForm = new Form2();
-            openedForm.Show();*/
             this.Hide();
             Form2 frm2 = new Form2();
             frm2.Show();

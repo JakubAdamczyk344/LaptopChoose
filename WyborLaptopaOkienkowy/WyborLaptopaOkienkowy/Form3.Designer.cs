@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.database1DataSet = new WyborLaptopaOkienkowy.Database1DataSet();
             this.notebooksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.notebooksTableAdapter = new WyborLaptopaOkienkowy.Database1DataSetTableAdapters.NotebooksTableAdapter();
@@ -37,17 +36,16 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.Notebook = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Processor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Graphics = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.RAMM = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HDDCapacity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SSDCapacity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notebooksBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(11, 200);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(659, 173);
-            this.listBox1.TabIndex = 0;
             // 
             // database1DataSet
             // 
@@ -95,15 +93,60 @@
             this.textBox2.Size = new System.Drawing.Size(659, 133);
             this.textBox2.TabIndex = 3;
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Notebook,
+            this.Processor,
+            this.Graphics,
+            this.RAMM,
+            this.HDDCapacity,
+            this.SSDCapacity});
+            this.listView1.Location = new System.Drawing.Point(11, 201);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(659, 153);
+            this.listView1.TabIndex = 4;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // Notebook
+            // 
+            this.Notebook.Text = "Laptop";
+            this.Notebook.Width = 161;
+            // 
+            // Processor
+            // 
+            this.Processor.Text = "Procesor";
+            this.Processor.Width = 139;
+            // 
+            // Graphics
+            // 
+            this.Graphics.Text = "Karta graficzna";
+            this.Graphics.Width = 140;
+            // 
+            // RAMM
+            // 
+            this.RAMM.Text = "RAM [GB]";
+            this.RAMM.Width = 72;
+            // 
+            // HDDCapacity
+            // 
+            this.HDDCapacity.Text = "HDD [GB]";
+            this.HDDCapacity.Width = 82;
+            // 
+            // SSDCapacity
+            // 
+            this.SSDCapacity.Text = "SSD [GB]";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 421);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listBox1);
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
@@ -115,8 +158,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
         private Database1DataSet database1DataSet;
         private System.Windows.Forms.BindingSource notebooksBindingSource;
         private Database1DataSetTableAdapters.NotebooksTableAdapter notebooksTableAdapter;
@@ -124,5 +165,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader Notebook;
+        private System.Windows.Forms.ColumnHeader Processor;
+        private System.Windows.Forms.ColumnHeader Graphics;
+        private System.Windows.Forms.ColumnHeader RAMM;
+        private System.Windows.Forms.ColumnHeader HDDCapacity;
+        private System.Windows.Forms.ColumnHeader SSDCapacity;
     }
 }
