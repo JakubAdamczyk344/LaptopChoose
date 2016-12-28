@@ -15,7 +15,7 @@ namespace WyborLaptopaOkienkowy
         private readonly string[] questions = new string[9]; //initialize array which will contain questions
         List<Panel> panels = new List<Panel>();
         //List<CheckBox> checkBoxes = new List<CheckBox>();
-        int whichQuestion = 0; //set number of first question to display
+        private int whichQuestion = 0; //set number of first question to display
         private static string size;
         private static string weight;
         private static string processorPerformance;
@@ -95,12 +95,12 @@ namespace WyborLaptopaOkienkowy
             setAnswers();
         }
 
-        private void setQuestion() //function for displaying question due to number of question
+        public void setQuestion() //function for displaying question due to number of question
         {
             textBox1.Text = questions[whichQuestion];
         }
 
-        private void setAnswers() //function for displaying possible answers for each question
+        public void setAnswers() //function for displaying possible answers for each question
         {
             foreach (var panel in panels) //hide all panels
             {
@@ -350,7 +350,7 @@ namespace WyborLaptopaOkienkowy
 
         private void showSummary()
         {
-            //this.Hide();
+            this.Close();
             Form3 frm3 = new Form3();
             frm3.Show();
         }

@@ -14,14 +14,14 @@ namespace WyborLaptopaOkienkowy
 {
     public partial class Form3 : Form
     {
-        
-        private static string size = Form2.getSize();
-        private static string weight = Form2.getWeight();
-        private static string processorPerformance = Form2.getProcessorPerformance();
-        private static string graphicPerformance = Form2.getGraphicPerformance();
-        private static string SSD = Form2.getSSD();
-        private static string RAM = Form2.getRAM();
-        private static string diskSpace = Form2.getDiskSpace();
+        //public static Form2 openedForm = null;
+        private string size = Form2.getSize();
+        private string weight = Form2.getWeight();
+        private string processorPerformance = Form2.getProcessorPerformance();
+        private string graphicPerformance = Form2.getGraphicPerformance();
+        private string SSD = Form2.getSSD();
+        private string RAM = Form2.getRAM();
+        private string diskSpace = Form2.getDiskSpace();
         string sizeQuery;
         string weightQuery;
         string SSDQuery;
@@ -55,11 +55,16 @@ namespace WyborLaptopaOkienkowy
         }
         private void Form3_Load(object sender, EventArgs e)
         {
+            
             ShowNotebooks();
         }
 
         private void ShowNotebooks()
         {
+            textBox2.Text = "Parametry dobranego laptopa: " + Environment.NewLine + "Rozmiar: " + size
+                + Environment.NewLine + "Waga: " + weight + Environment.NewLine + "Wydajność procesora: " + processorPerformance
+                + Environment.NewLine + "Wydajność karty graficznej: " + graphicPerformance + Environment.NewLine + "SSD: " + SSD
+                + Environment.NewLine + "RAM: " + RAM + Environment.NewLine + "Disk space: " + diskSpace;
             createQuery();
             textBox1.Text = query;
             using (connection = new SqlConnection(connectionString))
@@ -72,6 +77,16 @@ namespace WyborLaptopaOkienkowy
                 listBox1.ValueMember = "Laptop";
                 listBox1.DataSource = notebooksTable;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //utworzyć w form1 globalną zmienną form2 przy otwieraniu form2 i tu ją zamknąć
+            //https://social.msdn.microsoft.com/Forums/vstudio/en-US/c8d039e2-818c-44c4-bfe0-6052afbd6688/close-or-hide-a-form-from-another-form-c?forum=csharpgeneral
+            this.Close();
+            //Form1.openedForm.Close();
+            Form2 frm2 = new Form2();
+            frm2.Show();
         }
     }
 }
