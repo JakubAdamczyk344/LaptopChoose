@@ -43,6 +43,9 @@
             this.RAMM = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.HDDCapacity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SSDCapacity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Sizee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Weightt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Pricee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notebooksBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -72,12 +75,12 @@
             this.textBox1.Location = new System.Drawing.Point(11, 152);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(658, 43);
+            this.textBox1.Size = new System.Drawing.Size(923, 43);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(253, 379);
+            this.button1.Location = new System.Drawing.Point(406, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 30);
             this.button1.TabIndex = 2;
@@ -90,7 +93,7 @@
             this.textBox2.Location = new System.Drawing.Point(11, 13);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(659, 133);
+            this.textBox2.Size = new System.Drawing.Size(923, 133);
             this.textBox2.TabIndex = 3;
             // 
             // listView1
@@ -101,10 +104,13 @@
             this.Graphics,
             this.RAMM,
             this.HDDCapacity,
-            this.SSDCapacity});
+            this.SSDCapacity,
+            this.Sizee,
+            this.Weightt,
+            this.Pricee});
             this.listView1.Location = new System.Drawing.Point(11, 201);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(659, 153);
+            this.listView1.Size = new System.Drawing.Size(923, 153);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -112,7 +118,7 @@
             // Notebook
             // 
             this.Notebook.Text = "Laptop";
-            this.Notebook.Width = 161;
+            this.Notebook.Width = 155;
             // 
             // Processor
             // 
@@ -122,7 +128,7 @@
             // Graphics
             // 
             this.Graphics.Text = "Karta graficzna";
-            this.Graphics.Width = 140;
+            this.Graphics.Width = 147;
             // 
             // RAMM
             // 
@@ -132,23 +138,40 @@
             // HDDCapacity
             // 
             this.HDDCapacity.Text = "HDD [GB]";
-            this.HDDCapacity.Width = 82;
+            this.HDDCapacity.Width = 70;
             // 
             // SSDCapacity
             // 
             this.SSDCapacity.Text = "SSD [GB]";
             // 
+            // Sizee
+            // 
+            this.Sizee.Text = "Przekątna ekranu [cale]";
+            this.Sizee.Width = 134;
+            // 
+            // Weightt
+            // 
+            this.Weightt.Text = "Waga [kg]";
+            this.Weightt.Width = 71;
+            // 
+            // Pricee
+            // 
+            this.Pricee.Text = "Cena [zł]";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 421);
+            this.ClientSize = new System.Drawing.Size(946, 421);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Podsumowanie";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notebooksBindingSource)).EndInit();
@@ -172,5 +195,8 @@
         private System.Windows.Forms.ColumnHeader RAMM;
         private System.Windows.Forms.ColumnHeader HDDCapacity;
         private System.Windows.Forms.ColumnHeader SSDCapacity;
+        private System.Windows.Forms.ColumnHeader Sizee;
+        private System.Windows.Forms.ColumnHeader Weightt;
+        private System.Windows.Forms.ColumnHeader Pricee;
     }
 }

@@ -42,7 +42,8 @@ namespace WyborLaptopaOkienkowy
             if (RAM == "above 8 GB") RAMQuery = " RAM > 8";
             if (diskSpace == "below and equal 500 GB") diskSpaceQuery = " HDD + SSDCapacity <= 500";
             if (diskSpace == "above 500 GB") diskSpaceQuery = " HDD + SSDCapacity > 500";
-            query = "SELECT Name, Processor, Graphics, RAM, HDD, SSDCapacity FROM Notebooks WHERE" + sizeQuery + " AND " + weightQuery + " AND " + "ProcessorPerformance = '" +
+            query = "SELECT Name, Size, Weight, Processor, Graphics, RAM, HDD, SSDCapacity, Price FROM Notebooks WHERE" 
+                + sizeQuery + " AND " + weightQuery + " AND " + "ProcessorPerformance = '" +
                 processorPerformance + "' AND " + "GraphicPerformance = '" + graphicPerformance + "' AND " + SSDQuery +
                 " AND " + RAMQuery + " AND " + diskSpaceQuery;
         }
@@ -81,6 +82,9 @@ namespace WyborLaptopaOkienkowy
                 listitem.SubItems.Add(dr["RAM"].ToString());
                 listitem.SubItems.Add(dr["HDD"].ToString());
                 listitem.SubItems.Add(dr["SSDCapacity"].ToString());
+                listitem.SubItems.Add(dr["Size"].ToString());
+                listitem.SubItems.Add(dr["Weight"].ToString());
+                listitem.SubItems.Add(dr["Price"].ToString());
                 listView1.Items.Add(listitem);
             }
         }

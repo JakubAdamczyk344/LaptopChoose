@@ -35,7 +35,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(126, 55);
+            this.button1.Location = new System.Drawing.Point(127, 68);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 33);
             this.button1.TabIndex = 0;
@@ -47,19 +47,23 @@
             // 
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(380, 43);
+            this.label1.Size = new System.Drawing.Size(376, 46);
             this.label1.TabIndex = 1;
             this.label1.Text = resources.GetString("label1.Text");
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 98);
+            this.ClientSize = new System.Drawing.Size(400, 113);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Witaj";
             this.ResumeLayout(false);
 
         }
