@@ -33,7 +33,6 @@
             this.notebooksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.notebooksTableAdapter = new WyborLaptopaOkienkowy.Database1DataSetTableAdapters.NotebooksTableAdapter();
             this.tableAdapterManager = new WyborLaptopaOkienkowy.Database1DataSetTableAdapters.TableAdapterManager();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -70,14 +69,6 @@
             this.tableAdapterManager.NotebooksTableAdapter = this.notebooksTableAdapter;
             this.tableAdapterManager.UpdateOrder = WyborLaptopaOkienkowy.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(11, 152);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(923, 43);
-            this.textBox1.TabIndex = 1;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(406, 379);
@@ -108,9 +99,9 @@
             this.Sizee,
             this.Weightt,
             this.Pricee});
-            this.listView1.Location = new System.Drawing.Point(11, 201);
+            this.listView1.Location = new System.Drawing.Point(11, 152);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(923, 153);
+            this.listView1.Size = new System.Drawing.Size(923, 202);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -166,7 +157,6 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form3";
@@ -185,7 +175,6 @@
         private System.Windows.Forms.BindingSource notebooksBindingSource;
         private Database1DataSetTableAdapters.NotebooksTableAdapter notebooksTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ListView listView1;

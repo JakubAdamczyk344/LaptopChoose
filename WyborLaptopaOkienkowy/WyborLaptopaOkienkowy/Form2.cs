@@ -12,19 +12,20 @@ namespace WyborLaptopaOkienkowy
 {
     public partial class Form2 : Form
     {
-        private readonly string[] questions = new string[9];//initialize array which will contain questions
-        private readonly string[] hints = new string[9]; //initialize array which will contain help for user
-        List<Panel> panels = new List<Panel>();
-        private int whichQuestion = 0; //set number of first question to display
-        private static string size;
-        private static string weight;
-        private static string processorPerformance;
-        private static string graphicPerformance;
-        private static string SSD;
-        private static string RAM;
-        private static string diskSpace;
+        private readonly string[] questions = new string[9];//inicjalizacja tablicy zawierającej zestaw pytań
+        private readonly string[] hints = new string[9]; //inicijalizacja tablicy zawierającej wskazówki dla użytkownika
+        List<Panel> panels = new List<Panel>(); //utworzenie listy paneli zawierających możliwe odpowiedzi
+        private int whichQuestion = 0; //licznik pytań, zaczynamy zadawanie od pierszego elementu tablicy
+        private static string size; //rozmiar laptopa
+        private static string weight; //waga laptopa
+        private static string processorPerformance; //wydajność procesora
+        private static string graphicPerformance; //wydajność karty graficznej
+        private static string SSD; //czy ma być dysk SSD?
+        private static string RAM; //ile pamięci RAM
+        private static string diskSpace; //pojemność dysku (SSD + HDD)
 
-        public static string getSize()
+        //gettery do parametrów laptopa
+        public static string getSize() 
         {
             return size;
         }
@@ -58,30 +59,33 @@ namespace WyborLaptopaOkienkowy
         {
             return diskSpace;
         }
-
+        //konstruktor drugiego okna
         public Form2()
         {
             InitializeComponent();
-            questions[0] = "Czy zabierasz swojego laptopa w podróże?"; //full questions array with questions
+            //wypełniamy tablicę pytań
+            questions[0] = "Czy zabierasz swojego laptopa w podróże?";
             questions[1] = "Czy podróżujesz autem, czy komunikacją publiczną?";
             questions[2] = "Czy korzystasz z laptopa w podróży?";
-            questions[3] = "Czy zajmujesz się obróbką grafiki (zdjęć) hobbystycznie lub zawodowo?";
+            questions[3] = "Czy zajmujesz się obróbką grafiki 2D i zdjęć hobbystycznie lub zawodowo?";
             questions[4] = "Czy to Twój zawód?";
-            questions[5] = "Czy zajmujesz się projektowaniem grafiki 2D/3D lub projektowaiem CAD/CAM?";
+            questions[5] = "Czy zajmujesz się projektowaniem modelowaniem 3D lub projektowaiem CAD/CAM?";
             questions[6] = "Czy to Twój zawód?";
             questions[7] = "Czy grasz w gry komputerowe?";
             questions[8] = "Określ swój stosunek do gier komputerowych:";
+            //wypełniamy tablicę wskazówek
             hints[0] = "Zaznacz 'Tak', jeśli zabierasz ze sobą laptopa w podróże na tyle często, że jego rozmiar lub waga może wpływać na twoją satysfakcję z jego użytkowania.";
             hints[1] = "Podróż z laptopem autem sprawia, że mniejsze znaczenie ma jego waga. Zaznacz tę opcję, jeśli nie jest ona dla Ciebie ważna. Jednakże, jeśli często korzystasz z komunikacji publicznej warto ograniczyć wagę komputera. Zaznacz wtedy opcję 'Komunikacja publiczna'.";
             hints[2] = "Korzystanie z laptopa w podróży może być niewygodne, ze względu ograniczoną przestrzeń w samochodzie/komunikacji publicznej. Te pytanie ma wpływ na rozmiar dobieranego dla Ciebie laptopa.";
-            hints[3] = "Zaznacz 'Tak' jeśli chcesz by Twój komputer dobrze sprawował się w obróbce zdjęć.";
-            hints[4] = "Jeśli obróbka zdjęć jest Twoim sposobem na życie, zalecanym jest byś zaznaczył opcję 'Tak'. Dzięki temu Twój komputer będzie posiadał mocniejszy procesor  większą ilość pamięci RAM, by sprostać Twoim wymaganiom.";
-            hints[5] = "Jeśli wykorzystanie laptopa w projektowaniu grafiki i w pracy z oprogramowaniem CAD/CAM jest dla Ciebie ważne, potrzebujesz przynajmniej średnio wydajnego układu graficznego. Zalecanym jest, byś zaznaczył opcję 'Tak'.";
+            hints[3] = "Zaznacz 'Tak' jeśli chcesz by Twój komputer dobrze sprawował się w obróbce grafiki 2D i zdjęć.";
+            hints[4] = "Jeśli obróbka grafiki 2D i zdjęć jest Twoim sposobem na życie, zalecanym jest byś zaznaczył opcję 'Tak'. Dzięki temu Twój komputer będzie posiadał mocniejszy procesor  większą ilość pamięci RAM, by sprostać Twoim wymaganiom.";
+            hints[5] = "Jeśli wykorzystanie laptopa w modelowaniu 3D i w pracy z oprogramowaniem CAD/CAM jest dla Ciebie ważne, potrzebujesz przynajmniej średnio wydajnego układu graficznego. Zalecanym jest, byś zaznaczył opcję 'Tak'.";
             hints[6] = "Jeśli zarabiasz w ten sposób na życie, zaznacz 'Tak'. Parametry poszukiwanego laptopa zostaną dodatkowo podniesione.";
             hints[7] = "Zaznacz 'Tak', tylko jeśli ważne dla Ciebie jest, by Twój laptop nadawał się do gier komputerowych.";
             hints[8] = "Jeśli nie masz potrzeby grania we wszystkie gorące nowości zaznacz opcje 'Niedzielny gracz'. Jeśli zależy Ci na możliwości zagrania w większość tytułów wybierz opcje 'Zwykły gracz'. Natomiast jeśli musisz zagrać we wszystkie gry, jakich zapragniesz zaznacz 'Zapalony gracz'. W tej kategorii znajdziesz również prawdziwe potwory, które pozwolą Ci ujarzmić każdy tytuł.";
-            textBox1.Text = questions[whichQuestion];
-            textBox2.Text = hints[whichQuestion];
+            textBox1.Text = questions[whichQuestion]; //wyświetl pytanie zgodne z licznikiem pytań
+            textBox2.Text = hints[whichQuestion]; //wyświetl wskazówkę zgodną z licznikem wskazówek
+            //wypełnij listę paneli panelami zawierającymi checkBoxy z możliwymi odpowiedziami
             panels.Add(pnlAnswersQuestion0);
             panels.Add(pnlAnswersQuestion1);
             panels.Add(pnlAnswersQuestion2);
@@ -94,26 +98,27 @@ namespace WyborLaptopaOkienkowy
             setAnswers();
         }
 
-        public void setQuestion() //function for displaying question due to number of question
+        public void setQuestion() //wyświetl dane pytanie
         {
             textBox1.Text = questions[whichQuestion];
         }
 
-        public void setHint() //function for displaying question due to number of question
+        public void setHint() //wyświetl wskazówkę do danego pytania
         {
             textBox2.Text = hints[whichQuestion];
         }
 
-        public void setAnswers() //function for displaying possible answers for each question
+        public void setAnswers() //wyświetl panel z odpowiedzami do danego pytania
         {
-            foreach (var panel in panels) //hide all panels
+            foreach (var panel in panels) //ukryj wszystkie panele
             {
                 panel.Visible = false;
             }
-            panels[whichQuestion].Visible = true; //show panel which contains answers for specific question
+            panels[whichQuestion].Visible = true; //pokaż odpowiedni panel
         }
-
-        private void button1_Click(object sender, EventArgs e) //display next question and answers
+        //metoda obsługująca kliknięcie przycisku "dalej", po kliknięciu wyświetl następne pytanie, lub rozpocznik wnioskowanie
+        //jeśli użytkownik odpowiedział na wszystkie pytania
+        private void button1_Click(object sender, EventArgs e)
         {
             checkIfUserAnswered();
             skipQuestion();
@@ -131,11 +136,10 @@ namespace WyborLaptopaOkienkowy
                 checkAnswers();
                 showSummary();
             }
-            //if (whichQuestion == 9) whichQuestion = 0; //loop question and answer setting, only for tests
-            
         }
-
-        private void skipQuestion() //some questions need to be skipped if answer for previous question was "no"
+        //metoda pomijająca wyświetlanie pytań, jeśli na pytanie poprzedzające dotyczące tej samej tematyki
+        //użytkownik odpowiedział "nie"
+        private void skipQuestion()
         {
             
             if (whichQuestion == 0 && boxIfTakenNo.Checked == true)
@@ -155,7 +159,8 @@ namespace WyborLaptopaOkienkowy
                 whichQuestion = 8;
             }
         }
-        private void checkAnswers() //here rules are checked and paramaters of notebook are adjusted
+        //metoda sprawdzająca odpowiedzi na pytania i dobierająca na ich podstawie parametry laptopa
+        private void checkAnswers()
         {
             textBox1.Text = "Zakończono ankietę, czekaj na wynik wnioskowania";
             if (boxIfTakenNo.Checked == true)
@@ -181,7 +186,7 @@ namespace WyborLaptopaOkienkowy
             }
             if (boxIfDesignerNo.Checked == true && boxIfGraphicNo.Checked == true && boxIfPlayerNo.Checked == true)
             {
-                processorPerformance = "low";//ok
+                processorPerformance = "low";
                 graphicPerformance = "low";
                 SSD = "no";
                 diskSpace = "below and equal 1000 GB";
@@ -189,7 +194,7 @@ namespace WyborLaptopaOkienkowy
             }
             if ((boxIfDesignerYes.Checked == true && boxIfDesignerJobNo.Checked == true) || (boxIfPlayerYes.Checked == true && boxWhichPlayerRare.Checked == true))
             {
-                processorPerformance = "medium";//ok
+                processorPerformance = "medium";
                 graphicPerformance = "medium";
                 SSD = "no";
                 diskSpace = "below and equal 1000 GB";
@@ -197,7 +202,7 @@ namespace WyborLaptopaOkienkowy
             }
             if (boxIfGraphicYes.Checked == true && boxIfGraphicJobNo.Checked == true)
             {
-                processorPerformance = "medium";//nie ma kompa w bazie
+                processorPerformance = "medium";
                 graphicPerformance = "medium";
                 SSD = "yes";
                 diskSpace = "below and equal 1000 GB";
@@ -205,7 +210,7 @@ namespace WyborLaptopaOkienkowy
             }
             if (boxIfPlayerYes.Checked == true && boxWhichPlayerCasual.Checked == true)
             {
-                processorPerformance = "medium";//ok
+                processorPerformance = "medium";
                 graphicPerformance = "medium";
                 SSD = "yes";
                 diskSpace = "below and equal 1000 GB";
@@ -213,7 +218,7 @@ namespace WyborLaptopaOkienkowy
             }
             if (boxIfGraphicYes.Checked == true && boxIfGraphicJobYes.Checked == true)
             {
-                processorPerformance = "high";//ok
+                processorPerformance = "high";
                 if (graphicPerformance != "high") graphicPerformance = "medium";
                 SSD = "yes";
                 diskSpace = "below and equal 1000 GB";
@@ -221,18 +226,14 @@ namespace WyborLaptopaOkienkowy
             }
             if ((boxIfDesignerYes.Checked == true && boxIfDesignerJobYes.Checked == true) || (boxIfPlayerYes.Checked == true && boxWhichPlayerManiac.Checked == true))
             {
-                processorPerformance = "high";//ok
+                processorPerformance = "high";
                 graphicPerformance = "high";
                 SSD = "yes";
                 diskSpace = "above 1000 GB";
                 RAM = "above 8 GB";
             }
-            /*textBox1.Text = "Parametry dobranego laptopa: " + Environment.NewLine + "Rozmiar: " + size
-                + Environment.NewLine + "Waga: " + weight + Environment.NewLine + "Wydajność procesora: " + processorPerformance
-                + Environment.NewLine + "Wydajność karty graficznej: " + graphicPerformance + Environment.NewLine + "SSD: " + SSD
-                + Environment.NewLine + "RAM: " + RAM + Environment.NewLine + "Disk space: " + diskSpace;*/
         }
-        //Make sure that only one answer for every question can be checked
+        //Metoda dbająca o to, by tylko jedna odpowiedź na dane pytanie była zaznaczona
         private void boxIfTakenYes_CheckedChanged(object sender, EventArgs e)
         {
             if (boxIfTakenYes.Checked == true) boxIfTakenNo.Checked=false;
@@ -339,8 +340,9 @@ namespace WyborLaptopaOkienkowy
                 boxWhichPlayerRare.Checked = false;
             }
         }
-
-        private void checkIfUserAnswered() //this function checks if any of possible answers is checked. If not user cannot go to the next question
+        //Metoda sprawdzająca czy użytkownik udzielił odpowiedzi na pytanie, jeśli nie to po naciśnięciu przycisku "Dalej"
+        //nie wyświetla się kolejne pytanie
+        private void checkIfUserAnswered()
         {
             if (whichQuestion == 0 && boxIfTakenYes.Checked == false && boxIfTakenNo.Checked == false) whichQuestion = -1;
             if (whichQuestion == 1 && boxTravelByAuto.Checked == false && boxTravelByPublic.Checked == false) whichQuestion = 0;
@@ -352,13 +354,14 @@ namespace WyborLaptopaOkienkowy
             if (whichQuestion == 7 && boxIfPlayerYes.Checked == false && boxIfPlayerNo.Checked == false) whichQuestion = 6;
             if (whichQuestion == 8 && boxWhichPlayerRare.Checked == false && boxWhichPlayerCasual.Checked == false && boxWhichPlayerManiac.Checked == false) whichQuestion = 7;
         }
-
+        //Metoda wywołująca okno z podsumowaniem
         private void showSummary()
         {
             Form3 frm3 = new Form3();
             frm3.Show();
             this.Hide();
         }
+        //Metoda zamykająca aplikację po wyłączeniu okna
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Environment.Exit(0);

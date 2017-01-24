@@ -21,16 +21,24 @@ namespace WyborLaptopaOkienkowy
         private string SSD = Form2.getSSD();
         private string RAM = Form2.getRAM();
         private string diskSpace = Form2.getDiskSpace();
+        //Parametry laptopa w języku polskim, do wyświetlenia w podsumowaniu
+        private string sizePol;
+        private string weightPol;
+        private string processorPerformancePol;
+        private string graphicPerformancePol;
+        private string SSDPol;
+        private string RAMPol;
+        private string diskSpacePol;
+        //Fragmenty zapytania SQL do wyszukiwania laptopów w bazie danych
         string sizeQuery;
         string weightQuery;
         string SSDQuery;
         string RAMQuery;
         string diskSpaceQuery;
-
-        SqlConnection connection;
-        string connectionString; //contains info about database connection, name of database etc
-        string query;
-        private void createQuery() //here my query is created based on notebook's parameters
+        string connectionString; //informacje o połączeniu z bazą danych
+        string query; //zapytanie SQL
+        //Metoda tworząca zapytanie SQL
+        private void createQuery()
         {
             if (size == "all") sizeQuery = " Size > 0";
             if (size == "below and equal 15,6") sizeQuery = " Size <= 15.6";
@@ -47,7 +55,7 @@ namespace WyborLaptopaOkienkowy
                 processorPerformance + "' AND " + "GraphicPerformance = '" + graphicPerformance + "' AND " + SSDQuery +
                 " AND " + RAMQuery + " AND " + diskSpaceQuery;
         }
-
+        //Konstruktor okna z podsumowaniem
         public Form3()
         {
             InitializeComponent();
@@ -55,24 +63,23 @@ namespace WyborLaptopaOkienkowy
         }
         private void Form3_Load(object sender, EventArgs e)
         {
-            
             ShowNotebooks();
         }
-
+        //Metoda wyświetlająca znalezione laptopy
         private void ShowNotebooks()
         {
-            textBox2.Text = "Parametry dobranego laptopa: " + Environment.NewLine + "Rozmiar: " + size
-                + Environment.NewLine + "Waga: " + weight + Environment.NewLine + "Wydajność procesora: " + processorPerformance
-                + Environment.NewLine + "Wydajność karty graficznej: " + graphicPerformance + Environment.NewLine + "SSD: " + SSD
-                + Environment.NewLine + "RAM: " + RAM + Environment.NewLine + "Disk space: " + diskSpace;
+            translate();
+            textBox2.Text = "Parametry dobranego laptopa: " + Environment.NewLine + "Rozmiar: " + sizePol
+                + Environment.NewLine + "Waga: " + weightPol + Environment.NewLine + "Wydajność procesora: " + processorPerformancePol
+                + Environment.NewLine + "Wydajność karty graficznej: " + graphicPerformancePol + Environment.NewLine + "SSD: " + SSDPol
+                + Environment.NewLine + "RAM: " + RAMPol + Environment.NewLine + "Pojemność dysku: " + diskSpacePol;
             createQuery();
-            textBox1.Text = query;
-            
+            //Łączenie z bazą danych
             SqlConnection con = new SqlConnection(connectionString);
             SqlDataAdapter ada = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             ada.Fill(dt);
-
+            //Wyświetlanie laptopów w liście
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 DataRow dr = dt.Rows[i];
@@ -88,13 +95,34 @@ namespace WyborLaptopaOkienkowy
                 listView1.Items.Add(listitem);
             }
         }
-
+        //Metoda tłumacząca parametry laptów na język polski
+        private void translate()
+        {
+            if (size == "all") sizePol = "wszystkie rozmiary";
+            else sizePol = "do 15,6 cala";
+            if (weight == "all") weightPol = "wszystkie wagi";
+            else weightPol = "do 3 kg";
+            if (processorPerformance == "low") processorPerformancePol = "niska";
+            else if (processorPerformance == "medium") processorPerformancePol = "średnia";
+            else processorPerformancePol = "wysoka";
+            if (graphicPerformance == "low") graphicPerformancePol = "niska";
+            else if (graphicPerformance == "medium") graphicPerformancePol = "średnia";
+            else graphicPerformancePol = "wysoka";
+            if (SSD == "yes") SSDPol = "tak";
+            else SSDPol = "nie";
+            if (RAM == "below and equal 8 GB") RAMPol = "do 8 GB";
+            else RAMPol = "powyżej 8 GB";
+            if (diskSpace == "below and equal 1000 GB") diskSpacePol = "do 1 TB";
+            else diskSpacePol = "powyżej 1 TB";
+        }
+        //Metoda obsługująca kliknięcie na przycisk uruchamiający nowy dobór laptopa
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form2 frm2 = new Form2();
             frm2.Show();
         }
+        //Metoda zamykająca aplikację po wyłączeniu okna
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Environment.Exit(0);
