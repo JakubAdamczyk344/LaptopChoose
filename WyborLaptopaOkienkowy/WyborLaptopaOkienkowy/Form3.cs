@@ -35,13 +35,13 @@ namespace WyborLaptopaOkienkowy
             if (size == "all") sizeQuery = " Size > 0";
             if (size == "below and equal 15,6") sizeQuery = " Size <= 15.6";
             if (weight == "all") weightQuery = "Weight > 0";
-            if (weight == "below and equal 2,5 kg") weightQuery = "Weight <= 2.5";
+            if (weight == "below and equal 3 kg") weightQuery = "Weight <= 3";
             if (SSD == "no") SSDQuery = " SSD = 'False'";
             if (SSD == "yes") SSDQuery = " SSD = 'True'";
             if (RAM == "below and equal 8 GB") RAMQuery = " RAM <= 8";
             if (RAM == "above 8 GB") RAMQuery = " RAM > 8";
-            if (diskSpace == "below and equal 500 GB") diskSpaceQuery = " HDD + SSDCapacity <= 500";
-            if (diskSpace == "above 500 GB") diskSpaceQuery = " HDD + SSDCapacity > 500";
+            if (diskSpace == "below and equal 1000 GB") diskSpaceQuery = " HDD + SSDCapacity <= 1000";
+            if (diskSpace == "above 1000 GB") diskSpaceQuery = " HDD + SSDCapacity > 1000";
             query = "SELECT Name, Size, Weight, Processor, Graphics, RAM, HDD, SSDCapacity, Price FROM Notebooks WHERE" 
                 + sizeQuery + " AND " + weightQuery + " AND " + "ProcessorPerformance = '" +
                 processorPerformance + "' AND " + "GraphicPerformance = '" + graphicPerformance + "' AND " + SSDQuery +
@@ -97,7 +97,7 @@ namespace WyborLaptopaOkienkowy
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
     }
 }

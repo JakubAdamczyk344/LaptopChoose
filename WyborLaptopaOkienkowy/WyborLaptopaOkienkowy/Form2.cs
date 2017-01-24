@@ -165,7 +165,7 @@ namespace WyborLaptopaOkienkowy
             }
             if (boxIfTakenYes.Checked == true && boxTravelByPublic.Checked == true)
             {
-                weight = "below and equal 2,5 kg";
+                weight = "below and equal 3 kg";
             }
             if (boxIfTakenYes.Checked == true && boxTravelByAuto.Checked == true)
             {
@@ -184,7 +184,7 @@ namespace WyborLaptopaOkienkowy
                 processorPerformance = "low";//ok
                 graphicPerformance = "low";
                 SSD = "no";
-                diskSpace = "below and equal 500 GB";
+                diskSpace = "below and equal 1000 GB";
                 RAM = "below and equal 8 GB";
             }
             if ((boxIfDesignerYes.Checked == true && boxIfDesignerJobNo.Checked == true) || (boxIfPlayerYes.Checked == true && boxWhichPlayerRare.Checked == true))
@@ -192,23 +192,23 @@ namespace WyborLaptopaOkienkowy
                 processorPerformance = "medium";//ok
                 graphicPerformance = "medium";
                 SSD = "no";
-                diskSpace = "below and equal 500 GB";
+                diskSpace = "below and equal 1000 GB";
                 RAM = "below and equal 8 GB";
             }
-            if (boxIfGraphicYes.Checked == true && boxIfGraphicJobYes.Checked == true)
+            if (boxIfGraphicYes.Checked == true && boxIfGraphicJobNo.Checked == true)
             {
-                processorPerformance = "medium";//ok
-                graphicPerformance = "high";
+                processorPerformance = "medium";//nie ma kompa w bazie
+                graphicPerformance = "medium";
                 SSD = "yes";
-                diskSpace = "below and equal 500 GB";
+                diskSpace = "below and equal 1000 GB";
                 RAM = "below and equal 8 GB";
             }
             if (boxIfPlayerYes.Checked == true && boxWhichPlayerCasual.Checked == true)
             {
                 processorPerformance = "medium";//ok
-                graphicPerformance = "high";
+                graphicPerformance = "medium";
                 SSD = "yes";
-                diskSpace = "below and equal 500 GB";
+                diskSpace = "below and equal 1000 GB";
                 RAM = "above 8 GB";
             }
             if (boxIfGraphicYes.Checked == true && boxIfGraphicJobYes.Checked == true)
@@ -216,7 +216,7 @@ namespace WyborLaptopaOkienkowy
                 processorPerformance = "high";//ok
                 if (graphicPerformance != "high") graphicPerformance = "medium";
                 SSD = "yes";
-                diskSpace = "below and equal 500 GB";
+                diskSpace = "below and equal 1000 GB";
                 RAM = "above 8 GB";
             }
             if ((boxIfDesignerYes.Checked == true && boxIfDesignerJobYes.Checked == true) || (boxIfPlayerYes.Checked == true && boxWhichPlayerManiac.Checked == true))
@@ -224,7 +224,7 @@ namespace WyborLaptopaOkienkowy
                 processorPerformance = "high";//ok
                 graphicPerformance = "high";
                 SSD = "yes";
-                diskSpace = "above 500 GB";
+                diskSpace = "above 1000 GB";
                 RAM = "above 8 GB";
             }
             /*textBox1.Text = "Parametry dobranego laptopa: " + Environment.NewLine + "Rozmiar: " + size
@@ -361,7 +361,7 @@ namespace WyborLaptopaOkienkowy
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
     }
 }
